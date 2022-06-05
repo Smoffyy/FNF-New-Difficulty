@@ -1096,7 +1096,7 @@ class PlayState extends MusicBeatState
 		versionTxt.scrollFactor.set();
 		add(versionTxt);
 
-		botplayTxt = new FlxText(400, timeBarBG.y + 55, FlxG.width - 800, "ALPHA RELEASE", 32);
+		botplayTxt = new FlxText(400, timeBarBG.y + 55, FlxG.width - 0, "	", 0);
 		botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		botplayTxt.scrollFactor.set();
 		botplayTxt.borderSize = 1.25;
