@@ -9,8 +9,8 @@ import Controls;
 class ClientPrefs {
 	public static var downScroll:Bool = false;
 	public static var middleScroll:Bool = false;
-	public static var showFPS:Bool = true;
-	public static var flashing:Bool = true;
+	public static var showFPS:Bool = false;
+	public static var flashing:Bool = false;
 	public static var globalAntialiasing:Bool = true;
 	public static var noteSplashes:Bool = true;
 	public static var lowQuality:Bool = false;
@@ -23,7 +23,7 @@ class ClientPrefs {
 	public static var arrowHSV:Array<Array<Int>> = [[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]];
 	public static var imagesPersist:Bool = false;
 	public static var ghostTapping:Bool = true;
-	public static var timeBarType:String = 'Time Left';
+	public static var timeBarType:String = 'Disabled';
 	public static var scoreZoom:Bool = false;
 	public static var noReset:Bool = false;
 	public static var healthBarAlpha:Float = 1;
@@ -51,10 +51,10 @@ class ClientPrefs {
 		'opponentplay' => false
 	];
 
-	public static var opponentNotesDoDamage:Bool = false;
+	public static var opponentNotesDoDamage:Bool = true;
 	public static var opponentNotesCanKill:Bool = false;
 	public static var damageFromOpponentNotes:Float = 1;
-	public static var stunsBlockInputs:Bool = false;
+	public static var stunsBlockInputs:Bool = true;
 	public static var shakeOnMiss:Bool = true;
 	public static var advancedScoreTxt:Bool = true;
 	public static var playMissAnimations:Bool = true;

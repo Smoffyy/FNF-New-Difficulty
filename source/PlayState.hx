@@ -1082,28 +1082,28 @@ class PlayState extends MusicBeatState
 		add(iconP2);
 		reloadHealthBarColors();
 
-		scoreTxt = new FlxText(0, healthBarBG.y + 36, FlxG.width, "", ClientPrefs.advancedScoreTxt ? 18 : 20);
-		scoreTxt.setFormat(Paths.font("vcr.ttf"), ClientPrefs.advancedScoreTxt ? 18 : 20, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		scoreTxt = new FlxText(0, healthBarBG.y + 0, FlxG.width, "", ClientPrefs.advancedScoreTxt ? 0 : 0);
+		scoreTxt.setFormat(Paths.font("vcr.ttf"), ClientPrefs.advancedScoreTxt ? 0 : 0, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		scoreTxt.scrollFactor.set();
-		scoreTxt.borderSize = 1.2;
+		scoreTxt.borderSize = 0;
 		scoreTxt.visible = !ClientPrefs.hideHud;
 		add(scoreTxt);
 
-		versionTxt = new FlxText(0, FlxG.height - 24, 0, SONG.song + " - " +
+		versionTxt = new FlxText(0, FlxG.height - 0, 0, SONG.song + " - " +
 			CoolUtil.difficultyString() + " |  " +
-			MainMenuState.projectFnfVersion, 16);
-		versionTxt.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+			MainMenuState.projectFnfVersion, 0);
+		versionTxt.setFormat(Paths.font("vcr.ttf"), 0, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		versionTxt.scrollFactor.set();
 		add(versionTxt);
 
-		botplayTxt = new FlxText(400, timeBarBG.y + 55, FlxG.width - 0, "	", 0);
-		botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		botplayTxt = new FlxText(400, timeBarBG.y + 0, FlxG.width - 0, "	", 0);
+		botplayTxt.setFormat(Paths.font("vcr.ttf"), 0, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		botplayTxt.scrollFactor.set();
-		botplayTxt.borderSize = 1.25;
+		botplayTxt.borderSize = 0;
 		botplayTxt.visible = cpuControlled;
 		add(botplayTxt);
 		if(ClientPrefs.downScroll) {
-			botplayTxt.y = timeBarBG.y - 78;
+			botplayTxt.y = timeBarBG.y - 0;
 		}
 
 
@@ -2494,7 +2494,7 @@ class PlayState extends MusicBeatState
 			healthDrained = minDrained;
 
 		healthPercentageDisplay = health / 0.02;
-		healthPercentageBar = opponentChart ? 100 - healthPercentageDisplay : healthPercentageDisplay;
+		healthPercentageBar = opponentChart ? 500 - healthPercentageDisplay : healthPercentageDisplay;
 
 		iconP1.x = healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthPercentageBar, 0, 100, 100, 0) * 0.01) - iconOffset);
 		var oldP2 = healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 0, 100, 100, 0) * 0.01)) - (iconP2.width - iconOffset);
@@ -3485,8 +3485,8 @@ class PlayState extends MusicBeatState
 	public var totalPlayed:Float = 0;
 	public var totalNotesHit:Float = 0.0;
 
-	public var showCombo:Bool = true;
-	public var showRating:Bool = true;
+	public var showCombo:Bool = false;
+	public var showRating:Bool = false;
 
 	private function popUpScore(note:Note = null):Void
 	{
@@ -3524,9 +3524,9 @@ class PlayState extends MusicBeatState
 
 		var placement:String = Std.string(combo);
 
-		var coolText:FlxText = new FlxText(0, 0, 0, placement, 32);
+		var coolText:FlxText = new FlxText(0, 0, 0, placement, 0);
 		coolText.screenCenter();
-		coolText.x = FlxG.width * 0.35;
+		coolText.x = FlxG.width * 0;
 		//
 
 		var rating:FlxSprite = new FlxSprite();
