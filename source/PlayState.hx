@@ -3485,8 +3485,8 @@ class PlayState extends MusicBeatState
 	public var totalPlayed:Float = 0;
 	public var totalNotesHit:Float = 0.0;
 
-	public var showCombo:Bool = false;
-	public var showRating:Bool = false;
+	public var showCombo:Bool = true;
+	public var showRating:Bool = true;
 
 	private function popUpScore(note:Note = null):Void
 	{
@@ -3524,7 +3524,7 @@ class PlayState extends MusicBeatState
 
 		var placement:String = Std.string(combo);
 
-		var coolText:FlxText = new FlxText(0, 0, 0, placement, 0);
+		var coolText:FlxText = new FlxText(0, 0, 0, placement, 32);
 		coolText.screenCenter();
 		coolText.x = FlxG.width * 0;
 		//
